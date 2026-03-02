@@ -21,7 +21,7 @@ let meusPontos = 0;
 let pontosOponente = 0;
 
 // dificuldade
-let  dificuldade = "Normal"
+let  dificuldade = "Normal";
 let trilha,ponto,raquetada;
 
 function preload(){
@@ -48,7 +48,10 @@ function draw(){
   if(keyIsDown(DOWN_ARROW)){
     yRaquete += 10}
   
-  if(xBolinha -raio , xRaquete + 10 & yBolinha-raio < yRaquete + 90 & YBolinha + raio > yRaquete){
+  if(xBolinha - raio , xRaquete + 10 & yBolinha-raio < yRaquete + 90 & YBolinha + raio > yRaquete){
+    velocidadeXBolinha *= -1;
+    raquetada.play()}
+  if (xBolinha + raio > XRaqueteOponente & yBolinha - raio < yRaqueteOponente + 90 & yBolinha + raio > yRaqueteOponente) {
     velocidadeXBolinha *= -1;
     raquetada.play()}
 }
