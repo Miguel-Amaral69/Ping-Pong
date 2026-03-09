@@ -38,8 +38,8 @@ function setup(){
 function draw(){
   background(0);
   movimentoBolinha();
-  raquetes(xRaquete,yRaquete);
-  raquetes(xRaqueteOponente,yRaqueteOponente);
+  raquete(xRaquete,yRaquete);
+  raquete(xRaqueteOponente,yRaqueteOponente);
   npc(dificuldade);
   
   if(keyIsDown(UP_ARROW)){
@@ -48,10 +48,10 @@ function draw(){
   if(keyIsDown(DOWN_ARROW)){
     yRaquete += 10}
   
-  if(xBolinha - raio < xRaquete + 10 & yBolinha-raio < yRaquete + 90 & YBolinha + raio > yRaquete){
+  if(xBolinha - raio < xRaquete + 10 & yBolinha-raio < yRaquete + 90 & yBolinha + raio > yRaquete){
     velocidadeXBolinha *= -1;
     raquetada.play()}
-  if (xBolinha + raio > XRaqueteOponente & yBolinha - raio < yRaqueteOponente + 90 & yBolinha + raio > yRaqueteOponente) {
+  if (xBolinha + raio > xRaqueteOponente & yBolinha - raio < yRaqueteOponente + 90 & yBolinha + raio > yRaqueteOponente) {
     velocidadeXBolinha *= -1;
     raquetada.play()}
   
@@ -64,7 +64,7 @@ function draw(){
   fill(color(255,0,233));
   rect(450,10,40,20);
   fill(255);
-  text(pontosOponentes,470,26);
+  text(pontosOponente,470,26);
   
   if(xBolinha>595){
     meusPontos += 1;
@@ -100,5 +100,5 @@ function npc(){
     nivel = 30;
   }
   let velocidadeYRaqueteOponente = yBolinha - yRaqueteOponente - 10 /2;
-  yRaqueteOpontente += velocidadeYRaqueteOponente - nivel;
+  yRaqueteOponente += velocidadeYRaqueteOponente - nivel;
 }
